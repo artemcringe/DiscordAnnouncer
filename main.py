@@ -13,8 +13,8 @@ load_dotenv()
 
 bot = Bot(token=os.getenv("BOT_TOKEN"), parse_mode=ParseMode("HTML"))
 
-discord_channel_id = 1101590083632648303
-telegram_channel_id = "-1001869533666"
+discord_channel_id = os.getenv("DISCORD_CHANNEL_ID")
+telegram_channel_id = os.getenv("TELEGRAM_CHANNEL_ID")
 
 intents = discord.Intents.default()
 intents.message_content = True
